@@ -1,6 +1,8 @@
 # query-changes
-queries a term with google, and emails if the results change
 Work in Progress
+
+queries a term with google, and emails if the results change
+
 
 requires the following python packages: 
   BeautifulSoup4 (pip install beautifulsoup4)
