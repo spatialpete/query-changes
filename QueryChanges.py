@@ -3,7 +3,7 @@
 # if file exists, compares to previous results
 # if there is a new result, send an email
 
-import requests, sys, webbrowser, bs4
+import requests, sys, webbrowser, bs4, os.path
 
 queryTerm = 'AMD Ryzen'
 
@@ -25,5 +25,9 @@ for i in linkElems:
 outFile.close()
 
 # todo: if outFile already exists, compare new file to old file
+# this will need to be moved above the write results to text file part
+if os.path.exists('E:/Python/SearchResults.txt'):
+    oldFileList = outFile.readlines()
+    print oldFileList
 
 # todo: email any changes
