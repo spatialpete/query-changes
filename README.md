@@ -10,5 +10,6 @@ requires the following python packages:
   webbrowser (comes with python 3)
 
   pip, if using older python version: https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip
+  or on linux - sudo apt-get install python-pip
 
 change the queryTerm to what you are interested in
