@@ -18,13 +18,8 @@ linkElems = soup.select('.r a')
 print(linkElems[1])
 print(len(linkElems))
 
-# write results to text file
-#outFile = open('E:/Python/SearchResults.txt', 'w')
-#for i in linkElems:
-    #outFile.write(str(i) + '\n')
-#outFile.close()
 
-# todo: if outFile already exists, compare new file to old file
+# if outFile already exists, compare new file to old file
 # this will need to be moved above the write results to text file part
 compareList = []
 if os.path.exists('E:/Python/SearchResults.txt'):
@@ -32,7 +27,6 @@ if os.path.exists('E:/Python/SearchResults.txt'):
     oldFileList = oldFile.readlines()
     print(oldFileList[1])
     for newItem in linkElems:
-        #for oldItem in oldFileList:
         if newItem in oldFileList:
             compareList.append(newItem)
             print('new search result found')
